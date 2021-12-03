@@ -1,38 +1,1766 @@
-.App {
-  text-align: center;
+/* resets  */
+.container-fluid {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.ReactModal__Overlay {
+    background-color: rgba(0, 0, 0, 0.5) !important;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+div,
+p,
+span,
+button,
+label {
+    font-family: 'Nunito', sans-serif;  
+    text-decoration: none !important;
+    color: #FFF;
+    outline: none !important;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+input {
+    outline: none !important;
+    border: none;
 }
 
-.App-link {
-  color: #61dafb;
+.login-form input {
+    background-color: #36425E;
+    color: #FFF !important;
+    border: 0;
+    text-decoration: none !important;
+    outline: none !important;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.login-form input::placeholder {
+  font-size: 16px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.5);
+  opacity: 0.25;
+  font-family: 'Questrial', sans-serif;
+  opacity: 40%;
+}
+
+/* presets  */
+
+/* header  */
+.header {
+    background-image: url('../src/bg-img/Rectangle\ 32.png');
+    /* background-image: url('img/Rectangle\ 32.png'); */
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* navbar  */
+.navigation-container {
+    box-shadow: 0px 4px 4px 0px #FFFFFF0D;
+}
+
+.navigation-container .container-fluid {
+    padding: 0 !important
+}
+
+.navbar {
+    padding: 20px 0;
+}
+
+.navbar-brand {
+    padding: 0 !important;
+    margin-right: 135px;
+}
+
+nav li a {
+    font-size: 16px;
+    font-weight: 400;
+    color: #FFF !important;
+    font-family: 'Questrial', sans-serif;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+}
+
+.dropdown li a img {
+    margin-right: 9px;
+}
+
+.dropdown li a {
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.8) !important;
+    font-family: 'Questrial', sans-serif;
+}
+
+
+
+#pvc {
+    color: #27E508 !important
+}
+
+.nav-btn {
+    display: block;
+    padding: 0.5rem 1rem;
+    margin-left: 16px;
+    border-radius: 50px;
+    background-color: #007AF3;
+    color: #FFF;
+    border: none;
+}
+
+/* toggle  */
+.navbar-toggler {
+  background: #007AF3 !important;
+  border: none;
+  padding: 10px 6px !important;
+  outline: none !important;
+}
+
+.navbar-toggler span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  border: 1px;
+  background: white;
+  border: solid 1px white;
+}
+
+.navbar-toggler span + span {
+  width: 18px;
+  margin: 4px 0 0 4px;
+  width: 22px;
+}
+
+.navbar-toggler span + span + span {
+  width: 10px;
+  margin-left: 4px;
+}
+
+/* .search  */
+.search {
+    width: 769px;
+    margin: 0px auto;
+    margin-top: 202px;
+}
+
+.search h1 {
+    color: #FFF;
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 46px;
+    /* margin-bottom: 20px; */
+}
+
+.search-bar {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 80px;
+    background-color: #FFF;
+    padding: 0 40px;
+    margin-bottom: 144px;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 10px 0;
+    border: 0
+}
+
+.search-bar input::placeholder {
+    line-height: 40px !important;
+}
+
+.search-bar img {
+    cursor: pointer;
+}
+
+/* ongoing poll */
+.country {
+    width: 64px;
+    height: 40px;
+    background-color: #FFF;
+    padding: 7px 9px;
+    border-radius: 10px;
+    margin-right: 24px;
+}
+
+.country i {
+    color: #0A183D
+}
+
+.share-btn {
+    background-color: #0A183D;
+    color: #FFF;
+    font-size: 44px;
+    margin-right: 24px;
+}
+
+.polls-btn button {
+    padding: 10px 16px;
+    background-color: #081D43;
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 16px;
+    font-weight: 400;
+    border: 0px;
+}
+
+#chat {
+    border-radius: 10px 0 0 10px;
+}
+
+#leaderboard {
+    border-radius: 0 10px 10px 0;
+}
+
+.polls-btn button img {
+    margin-right: 8px;
+}
+
+.polls-btn button.active {
+    background-color: rgba(0, 122, 243, 1);
+    color: #FFF;
+}
+
+/* home polls  */
+.home-polls {
+    border-radius: 10px;
+    background-color: rgba(4, 19, 54, 1);
+}
+.home-polls .header {
+    border-radius: 10px 10px  0 0;
+    background-color: #0E2E81;
+    box-shadow: 0px 4px 4px 2px #0000000A;
+}
+
+.home-polls-btn > div {
+    padding: 20px 0;
+}
+
+.home-polls-btn .button {
+    width: 100%;
+}
+
+.home-polls-btn .button p {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.poll-btn-border {
+    height: 25px;
+    border: solid 1px rgba(135, 195, 254, 0.25)
+}
+
+.active-underline {
+    width: 40px;
+    border: solid 2px #87C3FE
+}
+
+/* polls  */
+.home-polls .polls {
+    padding: 30px 105px
+}
+
+.home-polls .polls .header {
+    background: unset;
+    margin-bottom: 34px;
+}
+
+.home-polls .polls .header h1 {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.home-polls .polls .header p {
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 0;
+}
+
+.home-polls .polls .header p i {
+    margin-left: 5px;
+}
+
+/* elections  */
+.home-polls .elections {
+    overflow-y: scroll; 
+    max-height:500px;
+    width: 100% !important;
+    overflow-x: hidden;
+}
+
+.home-polls .elections::-webkit-scrollbar {
+  width: 8px;
+  border-radius: 20px;
+}
+
+/* Track */
+.home-polls .elections::-webkit-scrollbar-track {
+  background-color: none;
+}
+
+/* Handle */
+.home-polls .elections::-webkit-scrollbar-thumb {
+  width: 8px;
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+.home-polls .elections::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.home-polls .elections img {
+    border-radius: 10px;
+}
+
+.bar {
+    height: 12px;
+    border-radius: 60px;
+    background-color: #FFF;
+}
+
+.bar-container {
+    border-radius: 60px;
+    background-color: rgba(0, 122, 243, 0.3); 
+}
+
+.candidate h1 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+.candidate p {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 400;
+    margin-bottom: 0;
+}
+
+#votes h1, #votes p {
+    text-align: right;
+    padding-right: 40px;
+}
+
+#vote {
+    height: 100%;
+    border-radius: 50%;
+    background-color: rgba(0, 122, 243, 1);
+}
+
+/* end section  */
+.end-section {
+    background-image: url('../src/bg-img/Rectangle\ 33.png');
+    /* background-image: url('img/Rectangle\ 33.png'); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 199px;
+}
+
+.enroll {
+    margin-bottom: 197px;
+}
+
+.enroll h1 {
+    font-size: 32px;
+    font-weight: 800;
+    max-width: 455px;
+}
+
+.enroll p {
+    font-size: 14px;
+    font-weight: 400;
+    max-width: 492px;
+}
+
+.enroll button {
+    font-size: 16px;
+    font-weight: 400;
+    padding: 16px 20px;
+    border-radius: 50px;
+    background-color: #007AF3;
+    border: none;
+}
+
+.enroll button i {
+    margin-left: 20px;
+}
+
+.enroll-pvc-container {
+    position: relative;
+}
+
+.enroll-pvc-container img {
+    border-radius: 50% 50% 50% 0;
+}
+
+.enroll-pvc-container .indicator {
+    width: 106px;
+    height: 100px;
+    border-radius: 50% 50% 50% 0;
+    background-color: rgba(0, 122, 243, 1);
+    position: absolute;
+    top: 40%;
+    left: -50px
+}
+
+/* adds  */
+.adds {
+    margin-bottom: 200px;
+}
+
+.adds p {
+    text-align: right;
+    margin-bottom: 8px;
+    font-size: 12px;
+    font-weight: 400;
+    color:rgba(255, 255, 255, 1)
+}
+
+.adds p i {
+    /* color: transparent; */
+    margin-left: 5px;
+}
+
+.adds img {
+    width: 100%
+}
+
+/* posts  */
+.recent-posts {
+    margin-bottom: 180px;
+}
+
+.post {
+    position: relative;
+}
+
+.recent-posts h1 {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 24px;
+}
+
+.post img {
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.post p {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 1);
+    font-weight: 400;
+    line-height: 18px;
+}
+
+.post .favourite {
+    position: absolute;
+    top: 10px;
+    right: 45px;
+    background-color: #FFF;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+}
+
+.post .favourite i {
+    font-size: 16px;
+    color: #FF0000
+}
+
+/* footer  */
+footer .header {
+    background: none;
+    margin-bottom: 20px;
+}
+
+footer .header > img {
+    margin-right: 53px;
+}
+
+footer .header #about {
+    width: 100%;
+}
+
+footer .header h1 {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+footer .header h1 span {
+    color: #007AF3
+}
+
+footer .header p {
+    max-width: 492px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+footer .header h3 {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+footer .divider {
+    width: 100%;
+    border: solid 1px rgba(255, 255, 255, 0.1);
+}
+
+footer h6 {
+    font-size: 12px;
+    font-weight: 400;
+    display: inline-block;
+    margin-right: 60px;
+}
+
+footer .footer-end {
+    padding: 21px 0 61px 0
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* login pagee  */
+.login {
+    margin-bottom: 180px;
+    margin-top: 113px;
+}
+
+.login .login-text h1 {
+    font-size: 42px;
+    font-weight: 400;
+    line-height: 57px;
+    max-width: 485px;
+    margin-bottom: 40px;
+}
+
+.login .login-text p {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.login .login-text p#stage-2 {
+    max-width: 342px;
+}
+
+.login .login-text p a {
+    color: #52A9FF
+}
+
+.login-form {
+    text-align: center;
+    padding: 40px 100px;
+    background-color: rgba(4, 19, 54, 1);
+    border-radius: 10px;
+}
+
+.login-form h1 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.login-form p {
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 22px;
+    color: rgba(255, 255, 255, 0.7);
+    max-width: 344px;
+}
+
+.login-form button {
+    width: 100%;
+    padding: 18px 0;
+    border-radius: 100px;
+    background-color: #FFF;
+    color: rgba(10, 24, 61, 1);
+    border: 0;
+    margin-bottom: 35px;
+}
+
+/* google  */
+.login-form button.google-login-btn span {
+    font-size: 14px!important;
+    font-weight: 400 !important;
+    color: rgba(10, 24, 61, 1) !important;
+}
+
+.login-form button.google-login-btn {
+    width: 100%;
+    padding: 8px 0 !important;
+    border-radius: 100px !important;
+    background-color: #FFF !important;
+    justify-content: center;
+    opacity: unset !important;
+    border: 0;
+    margin-bottom: 20px;
+}
+
+/* facebook  */
+.login-form .facebook-login {
+    width: 100%;
+    margin-bottom: 35px;
+    height: 59px;
+    background-color: antiquewhite;
+    border-radius: 100px;
+    background-color: #4c69ba;
+    position: relative;
+}
+
+.login-form .facebook-login i {
+    font-size: 20px;
+    position: absolute;
+    left: 100px;
+    top: 20px
+}
+
+.login-form button.kep-login-facebook {
+    text-transform: capitalize !important;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    background-color: transparent;
+    font-size: 14px!important;
+    font-weight: 400 !important;
+    color: #FFF
+} 
+
+.login-form .or {
+    width: 100%;
+    margin-bottom: 36px;
+}
+
+.login-form .or div {
+    border: solid 1px #FFF;
+    width: 100%;
+    height: 0
+}
+
+.login-form .or span {
+    display: inline-block;
+    margin: 0 16px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.login-form .input {
+    width: 100%
+}
+
+.login-form .input label {
+    display: block;
+    text-align: left;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 14px;
+}
+
+.login-form .input input {
+    display: block;
+    width: 100%;
+    padding: 18px 24px;
+    border-radius: 100px;
+    background-color: #36425E;
+}
+
+.login-form .input input#picture {
+    margin-bottom: 51px;
+    background-color: #FFF;
+    color: rgba(10, 24, 61, 1) !important
+}
+
+.login-form .input input#username, .login-form .input input#Email, .login-form .input input#number, .login-form .input input#fname, .login-form .input input#lname {
+    margin-bottom: 35px;
+}
+
+.login-form .input input#password {
+    margin-bottom: 14px;
+}
+
+.login-form .input input#username {
+    margin-bottom: 51px;
+}
+
+.login-form .remember-me {
+    width: 100%;
+    margin-bottom: 58px;
+}
+
+.login-form .remember-me input {
+    margin-right: 8px;
+}
+
+.login-form .remember-me a {
+    margin-bottom: 0;
+    font-size: 12px;
+    font-weight: 400;
+    color: rgba(82, 169, 255, 1);
+}
+
+#login {
+    background-color: rgba(0, 122, 243, 1);
+    color: #FFF;
+    margin: 0;
+}
+
+.login-form .progres-bar {
+    width: 100%;
+    margin-bottom: 67px;
+}
+
+.login-form .bar {
+    border-radius: 100px;
+    height: 10px;
+    width: 128px;
+    background-color: #032D65;
+    margin-right: 12px;
+}
+
+.login-form .indicator {
+    height: 100%;
+    width: 20%;
+    background-color: #007AF3;
+    border-radius: 100px;
+}
+
+.login-form .indicator2 {
+    height: 100%;
+    width: 100%;
+    background-color: #007AF3;
+    border-radius: 100px;
+}
+
+.login-form .progres-bar p {
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.login-form button i {
+    margin-left: 15px
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* stories  */
+.stories {
+    margin-top: 84px;
+}
+
+.stories .create {
+    border-radius: 10px;
+    padding: 32px;
+    background-color: rgba(7, 27, 67, 1);
+}
+
+.stories .create p {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 22px;
+}
+
+.stories .create input {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 18px 24px;
+    border-radius: 30px;
+    width: 100%;
+}
+
+.stories .create input::placeholder {
+    color: rgba(10, 24, 61, 0.25);
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.stories .saved-story .searchbar {
+    border-radius: 80px;
+    background-color: #FFF;
+    padding: 17px 24px;
+    margin-bottom: 20px;
+}
+
+.stories .saved-story .searchbar input {
+    width: 100%
+}
+
+.stories .saved-story .searchbar input::placeholder {
+    color: rgba(0, 0, 0, 0.25)
+}
+
+.stories .saved-story .story-list  {
+    background-color: rgba(7, 27, 67, 1);
+    border-radius: 10px;
+    padding: 32px;
+}
+
+.stories .saved-story .story-list h1 {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.stories .saved-story .story-list p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.stories .story-list .story {
+    background-color: rgba(4, 19, 54, 1);
+    border-radius: 10px;
+    margin-top: 40px;
+}
+
+.stories .story-list .story .header {
+    padding: 16px 30px;
+    background-color: rgba(6, 25, 71, 1);
+    border-radius: 10px 10px 0 0;
+}
+
+.stories .story-list .story .header h1 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 19px;
+}
+
+.stories .story-list .story .header p {
+    margin-right: 35px;
+    margin-bottom: 0;
+}
+
+.stories .story-list .story .header span {
+    font-size: 12px;
+    font-weight: 400;
+    margin-left: 7px;
+}
+
+.stories .story-list .story .body {
+    padding: 30px;
+}
+
+.stories .story-list .story .body p {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+}
+
+.stories .story-list .story .body a {
+    color: rgba(82, 169, 255, 1);
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.stories .story-list .story .body a i {
+    margin-left: 10px;
+}
+
+/* .stories .story-list .story .story-img {
+    width: 100%
+} */
+
+.stories .story-list .story .footer {
+    background-color: rgba(6, 25, 71, 1);
+    padding: 25px 30px;
+    border-radius: 0 0 10px 10px;
+}
+
+.stories .story-list .story .footer img {
+    margin-right: 12px;
+}
+
+.stories .story-list .story .footer i {
+    background-color: #FFF;
+    padding: 8px;
+    border-radius: 50%;
+}
+
+.stories .story-list .story .footer #like-container {
+    margin-right: 19px;
+}
+
+.stories .story-list .story .footer #like {
+    color:#FF0000;
+    margin-right: 12px;
+}
+
+.stories .story-list .story .footer #share {
+    color: #000000;
+    margin-right: 12px;
+}
+
+#comments {
+    cursor: pointer;
+}
+
+#story-list {
+    margin-bottom: 150px;
+}
+
+/* commments  */
+.coments {
+    /* height: 90vh; */
+    height: 100vh;
+    width: 506px;
+    background-color: rgba(7, 27, 67, 1);
+    position: absolute;
+    /* top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+    right: 100px;
+    padding: 30px;
+}
+
+.coments header p {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.coments header i {
+    font-size: 20px;
+    color: #FF0000;
+    cursor: pointer;
+}
+
+.coments .comment-input {
+    border-radius: 30px;
+    background-color: #FFF;
+    padding: 15px
+}
+
+.coments .comment-input input {
+    width: 100%;
+}
+
+.coments .comment-section {
+    height: 75vh;
+    overflow-y: scroll; 
+    padding-right: 10px;
+}
+
+.coments .comment-section::-webkit-scrollbar {
+  width: 8px;
+  border-radius: 20px;
+}
+
+/* Track */
+.coments .comment-section::-webkit-scrollbar-track {
+  background-color: none;
+}
+
+/* Handle */
+.coments .comment-section::-webkit-scrollbar-thumb {
+  width: 8px;
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+.coments .comment-section::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.coments .comment-section .comment {
+    border-bottom: solid 1px rgba(255, 255, 255, 0.2);
+    margin-bottom: 12px;
+}
+
+.coments .comment-section .comment header img {
+    margin-right: 12px;
+}
+
+.coments .comment-section .comment header h4 {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.coments .comment-section .comment header p {
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.coments .comment-section .comment .body p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    color: rgba(255, 255, 255, 0.5);
+    /* text-align: justify; */
+}
+
+.coments .comment-section .comment .body h6 {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 22px;
+    text-align: right;
+    margin-bottom: 12px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* profiles  */
+.profiles {
+    margin-top: 84px;
+    margin-bottom: 180px;
+}
+
+.profiles .searchbar {
+    border-radius: 80px;
+    background-color: #FFF;
+    padding: 17px 24px;
+    margin-bottom: 20px;
+}
+
+.profiles .searchbar input {
+    width: 100%
+}
+
+.profiles .searchbar input::placeholder {
+    color: rgba(0, 0, 0, 0.25)
+}
+
+.profiles .categories {
+    padding: 25px;
+    background-color: rgba(6, 25, 71, 1);
+    border-radius: 10px;
+}
+
+.profiles .categories h1 {
+    font-size: 20px;
+    font-weight: 600
+}
+
+/* .profiles .categories input {
+    border-radius: 10px;
+    border: 0;
+} */
+
+.profiles .categories label {
+    font-size: 16px;
+    font-weight: 400;
+    margin-left: 13px;
+}
+
+.profiles .profile, .main .other-profiles .profile {
+    padding: 30px;
+    background-color: rgba(10, 24, 61, 1);
+    border-radius: 10px;
+}
+
+.profiles .profile .img-container, .main .other-profiles .profile .img-container {
+    margin-right: 30px;
+    width: 10%
+}
+
+.profiles .profile .content, .main .other-profiles .profile .content {
+    width: 100%
+}
+
+.profiles .profile .img-container img, .main .other-profiles .profile .img-container img {
+    border-radius: 10px;
+}
+
+.profiles .profile h1, .main .other-profiles .profile h1 {
+    font-size: 20px;
+    font-weight: 600;
+    color: rgba(135, 195, 254, 1)
+}
+
+.profiles .profile h3, .main .other-profiles .profile h3 {
+    font-size: 14px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.6);
+    line-height: 24px;
+    max-width: 504px;
+}
+
+.profiles .profile .vote, .main .other-profiles .profile .vote {
+    background-color: rgba(0, 122, 243, 1);
+    padding: 10px 12px;
+    border-radius: 50%;
+}
+
+.profiles .profile p, .main .other-profiles .profile p {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* personal profile  */
+.aspirant {
+    margin: 84px 0 145px 0
+}
+
+.aside .searchbar {
+    border-radius: 80px;
+    background-color: #FFF;
+    padding: 17px 24px;
+}
+
+.aside .searchbar input {
+    width: 100%
+}
+
+.aside .searchbar input::placeholder {
+    color: rgba(0, 0, 0, 0.25)
+}
+
+.aside #profile-pic {
+    border-radius: 10px;
+    width: 100%;
+}
+
+.aside .active, .aside .history {
+    background-color: rgba(6, 25, 71, 1);
+    padding: 26px;
+    border-radius: 10px;
+}
+
+.aside .active h1, .aside .history h1 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.aside .active p {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.aside .active .vote {
+    background-color: rgba(0, 122, 243, 1);
+    padding: 8px 10px;
+    border-radius: 50%;
+}
+
+.aside .active .disclaimer img {
+    margin-right: 23px
+}
+
+.aside .active .disclaimer h6 {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.aside .history .single-history {
+    margin-top: 40px
+}
+
+.aside .history .single-history h3 {
+    margin-bottom: 6px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.aside .history .single-history p {
+    margin-bottom: 6px;
+    font-size: 14px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* main  */
+.main #into-video {
+    margin-bottom: 45px;
+}
+
+.main #name {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 24px;
+}
+
+.main .body {
+    padding: 30px;
+    background-color: rgba(8, 22, 47, 1);
+    border-radius: 10px;
+    margin-bottom: 80px;
+}
+
+.main .body h3 {
+    margin-bottom: 8px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.main .body p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.main .other-profiles h1 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 24px;
+}
+
+/* .main .other-profiles .profile {
+    padding: 30px;
+    background-color: rgba(10, 24, 61, 1);
+    border-radius: 10px;
+}
+
+.main .other-profiles .profile .img-container {
+    margin-right: 30px;
+    width: 10%
+}
+
+.main .other-profiles .profile .content {
+    width: 100%
+}
+
+.main .other-profiles .profile .img-container img {
+    border-radius: 10px;
+}
+
+.main .other-profiles .profile h1 {
+    font-size: 20px;
+    font-weight: 600;
+    color: rgba(135, 195, 254, 1)
+}
+
+.main .other-profiles .profile h3 {
+    font-size: 14px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.6);
+    line-height: 24px;
+    max-width: 504px;
+}
+
+.main .other-profiles .profile .vote {
+    background-color: rgba(0, 122, 243, 1);
+    padding: 10px 12px;
+    border-radius: 50%;
+}
+
+.main .other-profiles .profile p {
+    font-size: 14px;
+    font-weight: 400;
+} */
+
+.main .other-profiles span a {
+    color: rgba(135, 195, 254, 1)
+}
+
+.main .other-profiles span i {
+    color: rgba(135, 195, 254, 1);
+    margin-left: 8px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* settings  */
+.profile-setting {
+    margin-top: 100px;
+    margin-bottom: 60px;
+}
+
+.profile-setting header {
+    padding: 25px 120px;
+    background-color: #007AF3;
+    border-radius: 10px 10px 0 0;
+}
+
+.profile-setting header p {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.profile-setting .body {
+    padding: 56px 125px 81px 125px;
+    background-color: #0E1832;
+    border-radius: 0 0 10px 10px;
+    transition: ease-in-out 2s;
+}
+
+.profile-setting .body input::placeholder {
+    color: rgba(0, 0, 0, 0.5)
+}
+
+.profile-setting .body .profile-pic img {
+    width: 120px;
+    border-radius: 50%;
+    margin-right: 100px;
+}
+
+.profile-setting .body .profile-pic input {
+    background-color: #007AF3;
+    padding: 16px 20px;
+    /* width: 230px; */
+    border-radius: 50px;
+}
+
+.profile-setting .body .input label {
+    font-size: 20px;
+    font-weight: 600;
+    width: 218px
+}
+
+.profile-setting .body .input input {
+    padding: 12px 25px;
+    border-radius: 80px;
+    box-shadow: 0px 4px 4px 0px #007AF30A;
+    width: 345px;
+    margin-right: 47px;
+}
+
+.profile-setting .body button {
+    background-color: rgba(0, 122, 243, 1);
+    width: 524px;
+    margin-top: 74px;
+    margin-left: 218px;
+    padding: 16px 0;
+    border-radius: 50px;
+    border: 0;
+}
+
+.password-setting {
+    margin-bottom: 184px;
+}
+
+.password-setting .body button {
+    width: 345px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* polls  */
+.polls-container .title {
+    padding: 13px 44px;
+    background-color: rgba(0, 122, 243, 1);
+    border-radius: 10px 10px 0 0;
+}
+
+.polls-container .title p {
+    margin-bottom: 0;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.polls-container .body {
+    padding: 0 44px;
+    background-color: rgba(14, 24, 50, 1);
+    border-radius: 0 0 10px 10px;
+}
+
+.polls-container .body .poll {
+    border-top: solid 2px rgba(255, 255, 255, 0.1);
+    padding: 22px 0 17px 0;
+}
+
+.polls-container .body .poll h1 {
+    margin-bottom: 7px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.polls-container .body .poll p {
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.polls-container .body .poll h4 {
+    color: rgba(0, 122, 243, 1);
+    margin-bottom: 0;
+    font-size: 16px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.polls-container .body .poll h4 i {
+    margin-left: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* individual polls  */
+.individual-polls {
+    margin-top: 84px;
+    margin-bottom: 180px;
+}
+
+.individual-polls .title {
+    margin-bottom: 24px;
+}
+
+.individual-polls .title i {
+    margin-right: 19px;
+}
+
+.individual-polls .title p {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+/* candidate  */
+.individual-polls .candidates {
+    background-color: rgba(4, 19, 54, 1);
+    border-radius: 10px;
+    padding: 64px 94px
+}
+
+.individual-polls .candidate img {
+    border-radius: 10px;
+}
+
+.individual-polls .candidate h1 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+.individual-polls .candidate p {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 400;
+    margin-bottom: 0;
+}
+
+.individual-polls #votes h1, .individual-polls #votes p {
+    text-align: right;
+    padding-right: 40px;
+}
+
+.individual-polls #vote {
+    height: 100%;
+    border-radius: 50%;
+    background-color: rgba(0, 122, 243, 1);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* search page  */
+.search-page {
+    margin: 84px 0 145px 0
+}
+
+.search-page .aside .searchbar input {
+    width: 100%
+}
+
+.search-page .aside .searchbar input::placeholder {
+    color: rgba(0, 0, 0, 0.25)
+}
+
+.search-page .aside .categories {
+    padding: 25px;
+    background-color: rgba(6, 25, 71, 1);
+    border-radius: 10px;
+}
+
+.search-page .aside .categories h1 {
+    font-size: 20px;
+    font-weight: 600
+}
+
+.search-page .aside .categories label {
+    font-size: 16px;
+    font-weight: 400;
+    margin-left: 13px;
+}
+
+.search-page .profile {
+    padding: 30px;
+    background-color: rgba(10, 24, 61, 1);
+    border-radius: 10px;
+}
+
+.search-page .profile .img-container {
+    margin-right: 30px;
+    width: 10%
+}
+
+.search-page .profile .content {
+    width: 100%
+}
+
+.search-page .profile .img-container img {
+    border-radius: 10px;
+}
+
+.search-page .profile h1 {
+    font-size: 20px;
+    font-weight: 600;
+    color: rgba(135, 195, 254, 1)
+}
+
+.search-page .profile h3 {
+    font-size: 14px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.6);
+    line-height: 24px;
+    max-width: 504px;
+}
+
+.search-page .profile .vote {
+    background-color: rgba(0, 122, 243, 1);
+    padding: 10px 12px;
+    border-radius: 50%;
+}
+
+.search-page .profile p {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.search-page .story, .search-page .poll {
+    padding: 23px 37px;
+    background-color: rgba(10, 24, 61, 1);
+    border-radius: 10px;
+    margin-bottom: 16px;
+}
+
+.search-page .story h1, .search-page .poll h1 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 19px;
+}
+
+.search-page .story p {
+    margin-right: 35px;
+    margin-bottom: 0;
+}
+
+.search-page .story span {
+    font-size: 12px;
+    font-weight: 400;
+    margin-left: 7px;
+}
+
+.search-page .poll .row {
+    border-bottom: solid 2px rgba(255, 255, 255, 0.1);
+}
+
+.search-page .poll p {
+    font-size: 14px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.5)
+}
+
+.search-page .poll h4 {
+    font-size: 12px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.5)
+}
+
+.search-page .poll h3 {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* media queries */
+@media (min-width: 1400px) {
+    
+}
+
+@media (min-width: 1120px) and (max-width: 1399px) {
+
+}
+
+@media (min-width: 992px) and (max-width: 1119px) {
+    
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    
+}
+
+@media (min-width: 386px) and (max-width: 575px) {
+    
+}
+
+@media (max-width: 385px) {
+   
 }
